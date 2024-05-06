@@ -1,0 +1,31 @@
+
+{% extends 'layout.html' %} {% block body %}
+
+
+
+<div class="container py-2 mx-auto my-50 h-10 " style="margin: 9rem;">
+  <div class="row">
+      <div class="col-sm py-2 py-md-3">
+          <div class="card card-body" style="justify-content: center; background-color:#ffebcd">
+            <button style="justify-content: center; background-color:#ffebcd; border: none; display: block; outline: none;" id="google_translate_element"></button>
+   
+            <p class="text-center" id="texttt" style="color: black; font-size: 22px;">{{ prediction }}</p>
+            
+          </div>
+      </div>
+  </div>
+</div>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script>
+function googleTranslateElementInit()
+  {
+   new google.translate.TranslateElement(
+      {pageLanguage: 'hi'},
+      'google_translate_element'
+    );
+  }
+
+</script>
+
+
+{% endblock %}
